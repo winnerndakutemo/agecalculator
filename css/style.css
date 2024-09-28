@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf"),
+    url("../assets/fonts/Poppins-Italic.ttf"),
+    url("../assets/fonts/Poppins-Bold.ttf"),
+    url("../assets/fonts/Poppins-BoldItalic.ttf"),
+    url("../assets/fonts/Poppins-ExtraBold.ttf"),
+    url("../assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smoke-grey: hsl(0, 1%, 44%);
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
+  font-family: "Poppins";
 }
 
 body {
@@ -9,4 +25,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(0, 0%, 94%);
+  padding: 10px;
+}
+
+.container {
+  background: white;
+  min-width: 400px;
+  max-width: 100%;
+  min-height: 300px;
+  padding: 1.5rem;
+  border-radius: 10px 10px 100px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6em;
+  width: 70%;
+}
+.form-controls {
+  width: 25%;
+}
+input {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--light-grey);
+}
+
+.results {
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+
+.answer {
+  color: var(--purple);
 }
