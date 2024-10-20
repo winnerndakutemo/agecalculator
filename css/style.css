@@ -73,6 +73,12 @@ input {
   font-size: 1.2rem;
   text-align: left;
   padding: 0.6rem;
+
+  transition: all 0.3s;
+}
+input:focus,
+input:hover {
+  outline: 1px solid var(--purple);
 }
 
 .results {
@@ -109,6 +115,11 @@ input {
   background-color: var(--purple);
   padding: 1rem;
   border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.icon-arrow:hover {
+  background-color: black;
 }
 .image-container {
   text-align: center;
