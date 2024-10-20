@@ -48,7 +48,7 @@ body {
   border-radius: 10px 10px 150px 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+
   flex-direction: column;
 }
 
@@ -59,10 +59,10 @@ form {
   width: 70%;
 }
 .form-controls {
-  width: 25%;
+  width: 50%;
 }
 input {
-  height: 30px;
+  min-height: 50px;
   width: 100%;
   text-align: center;
   border-radius: 5px;
@@ -96,4 +96,47 @@ input {
   letter-spacing: 0.2rem;
   font-size: 0.7rem;
   text-transform: uppercase;
+}
+
+/* Separator */
+.separator {
+  border-top: 1px solid #ccc;
+  width: 90%;
+  align-self: center;
+}
+
+.icon-arrow {
+  background-color: var(--purple);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.image-container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 530px) {
+  .results {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .separator {
+    width: 50%;
+  }
+  .image-container {
+    justify-content: left;
+  }
+  .icon-arrow {
+  }
+  .hidden {
+    display: block;
+  }
 }
