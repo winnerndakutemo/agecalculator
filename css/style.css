@@ -11,10 +11,17 @@
   font-weight: 900;
   font-style: italic;
 }
+@font-face {
+  font-family: "Poppins Semi-Bold";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
 :root {
   --purple: hsl(259, 100%, 65%);
   --light-grey: hsl(0, 0%, 86%);
   --smoke-grey: hsl(0, 1%, 44%);
+}
+* {
+  box-sizing: border-box;
 }
 
 body,
@@ -35,11 +42,10 @@ body {
 
 .container {
   background: white;
-  min-width: 400px;
-  max-width: 100%;
-  min-height: 300px;
+  max-width: 650px;
+
   padding: 1.5rem;
-  border-radius: 10px 10px 100px 10px;
+  border-radius: 10px 10px 150px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +68,11 @@ input {
   border-radius: 5px;
   outline: none;
   border: 1px solid var(--light-grey);
+  font-family: "Poppins Semi-Bold", "Arial";
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 0.6rem;
 }
 
 .results {
@@ -77,4 +88,12 @@ input {
   font-weight: 900;
   color: black;
   font-family: "Poppins Bold";
+}
+
+.label {
+  color: gray;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
 }
