@@ -8,6 +8,10 @@ inputs.forEach((input) => {
       e.target.parentElement.parentElement.dispatchEvent(
         new CustomEvent("emptyFields")
       );
+      //avoiding extra validation
+      if (!e.target.value.trim()) {
+        return;
+      }
     } else {
       errorParagraphs.forEach((paragraph) => {
         paragraph.classList.add("error-hidden");
@@ -16,6 +20,19 @@ inputs.forEach((input) => {
       inputs.forEach((input) => {
         input.classList.remove("input-error");
       });
+    }
+
+    if (!isValid(e.target)) {
+      const paragraph = e.target.parentElement.querySelector(".error");
+      paragraph.classList.remove("error-hidden");
+      paragraph.innerHTML = "Enter a valid " + e.target.id;
+      e.target.classList.add("input-error");
+    } else {
+      //revert changes
+      const paragraph = e.target.parentElement.querySelector(".error");
+      paragraph.classList.add("error-hidden");
+      paragraph.innerHTML = "Enter a valid " + e.target.id;
+      e.target.classList.remove("input-error");
     }
   });
 });
@@ -50,4 +67,15 @@ function areEmptyFields(inputs) {
   }
 
   return false;
+}
+
+function isValid(input) {
+  if (input.id === "day") {
+    ("");
+    return input.value <= 31 && input.value >= 1 ? true : false;
+  } else if (input.id === "month") {
+    return input.value <= 12 && input.value >= 1 ? true : false;
+  } else if (input.id === "year") {
+    return input.value >= 1 ? true : false;
+  }
 }
