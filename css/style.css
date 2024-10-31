@@ -149,3 +149,18 @@ input:hover {
     display: block;
   }
 }
+
+/* Dynamic */
+.error {
+  color: red;
+  margin: 0.4rem 0;
+  font-size: 0.7em;
+}
+
+.error-hidden {
+  visibility: hidden;
+}
+
+.input-error {
+  outline: 1px solid red;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Age calculator-Winner Ndakutemo</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="./js/app.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -12,6 +13,7 @@
         <div class="form-controls">
           <label class="label">Day</label> <br />
           <input type="number" name="day" id="day" placeholder="DD" required />
+          <p class="error error-hidden"></p>
         </div>
 
         <div class="form-controls">
@@ -23,6 +25,7 @@
             placeholder="MM"
             required
           />
+          <p class="error error-hidden"></p>
         </div>
 
         <div class="form-controls">
@@ -34,6 +37,7 @@
             placeholder="YYYY"
             required
           />
+          <p class="error error-hidden"></p>
         </div>
       </form>
 
@@ -44,7 +48,6 @@
           alt="An purple arrow showing the floor"
           class="icon-arrow"
         />
-        <div class="separator hidden"></div>
       </div>
       <div class="results">
         <h2><span class="answer">--</span>years</h2>
