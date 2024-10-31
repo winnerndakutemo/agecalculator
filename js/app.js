@@ -64,7 +64,7 @@ form.addEventListener("emptyFields", (e) => {
 });
 /**
  *
- * @param {HTMLInputElement} inputs
+ * @param {DOMTokenList} inputs
  * @returns {Boolean} TRUE if all given inputs are NOT empty otherwise FALSE
  */
 function areEmptyFields(inputs) {
@@ -77,6 +77,11 @@ function areEmptyFields(inputs) {
   return false;
 }
 
+/**
+ * Checks if the value of the input element is in a valide date format!
+ * @param {HTMLInputElement} input
+ * @returns {Boolean} TRUE if the value is correct otherwise, FALSE
+ */
 function isValid(input) {
   if (input.id === "day") {
     return input.value <= 31 && input.value >= 1 ? true : false;
@@ -87,6 +92,13 @@ function isValid(input) {
   }
 }
 
+/**
+ * Function that calculates an age based on given year, month, day value.
+ * @param {Number | String} year
+ * @param {Number | String} month
+ * @param {Number | String} day
+ * @returns {Object} An Object containing the  age's years, months and days.
+ */
 function getAge(year, month, day) {
   const birthDate = new Date(year, month - 1, day);
   const today = new Date();
@@ -109,7 +121,10 @@ function getAge(year, month, day) {
     days: dayDiff,
   };
 }
-
+/**
+ * Function that inserts the age Object and each value inside, Into the HTML DOM. With predetermined Elements.
+ * @param {Object} age Object containing the age's years, months and days
+ */
 function insertAge(age) {
   const yearsOutput = document.querySelector(".years-output");
   const monthsOutpout = document.querySelector(".months-output");
