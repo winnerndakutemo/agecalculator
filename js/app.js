@@ -62,6 +62,7 @@ form.addEventListener("emptyFields", (e) => {
     }
   });
 });
+
 /**
  *
  * @param {DOMTokenList} inputs
