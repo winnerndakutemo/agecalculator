@@ -52,6 +52,7 @@ body {
   flex-direction: column;
 }
 
+/* Form and Inputs */
 form {
   display: flex;
   justify-content: space-between;
@@ -80,22 +81,6 @@ input:focus,
 input:hover {
   outline: 1px solid var(--purple);
 }
-
-.results {
-  font-size: 3rem;
-}
-
-.answer {
-  color: var(--purple);
-}
-
-.results h2 {
-  margin: 0;
-  font-weight: 900;
-  color: black;
-  font-family: "Poppins Bold";
-}
-
 .label {
   color: gray;
   font-weight: 800;
@@ -128,9 +113,42 @@ input:hover {
 
   justify-content: center;
 }
+
+/*Age's Display section*/
+.results {
+  font-size: 3rem;
+}
+
+.answer {
+  color: var(--purple);
+}
+
+.results h2 {
+  margin: 0;
+  font-weight: 900;
+  color: black;
+  font-family: "Poppins Bold";
+}
+
 .hidden {
   display: none;
 }
+
+/* Dynamic Error messages*/
+.error {
+  color: red;
+  margin: 0.4rem 0;
+  font-size: 0.7em;
+}
+
+.error-hidden {
+  visibility: hidden;
+}
+
+.input-error {
+  outline: 1px solid red;
+}
+/* RESPONSIVE */
 
 @media screen and (max-width: 530px) {
   .results {
@@ -148,19 +166,4 @@ input:hover {
   .hidden {
     display: block;
   }
-}
-
-/* Dynamic */
-.error {
-  color: red;
-  margin: 0.4rem 0;
-  font-size: 0.7em;
-}
-
-.error-hidden {
-  visibility: hidden;
-}
-
-.input-error {
-  outline: 1px solid red;
 }
